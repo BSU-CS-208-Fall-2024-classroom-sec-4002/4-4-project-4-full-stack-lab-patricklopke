@@ -5,4 +5,25 @@ head
     title My First Full Stack
 body
     h1 Simple TODO APP
-    p TODO: Complete the app!
+    p add your tasks
+    form(action="/", method="post")
+        label
+        p TODO: 
+            input#taskInput(type='text' name='todo' placeholder="task" value='')
+        label
+            input(type='submit' value='add')
+
+    h2 My TODO List
+
+    ul
+    - for (let i = 0; i < tasks.length; i++)
+        li= tasks[i].id + " " + tasks[i].task
+            form(action="/delete", method="post")
+                input(type="hidden", name="id" value=tasks[i].id)
+                input(type="submit", value="Delete")
+
+div.sep
+    img(src='https://i.redd.it/hzjxvifn92z51.jpg', alt='umm', style='width:70%;height:50%;')
+    div
+        img(src='https://media.tenor.com/6m3I1g_WiokAAAAM/fish-spin-sha.gif', alt='umm2', style='width:30%;height:50%;')
+        img(src='https://i.pinimg.com/736x/60/01/67/6001673c2d25ad0e22b510355a779441.jpg', alt='umm3', style='width:30%;height:50%;')

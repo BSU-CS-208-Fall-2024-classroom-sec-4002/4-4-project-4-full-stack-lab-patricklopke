@@ -1,3 +1,18 @@
 body{
-    background-color: hotpink;
+    background-color: 	#4A412A;
+    font-family: sans-serif;
+    color: #812500;
+}
+h2{
+    border-bottom: ridge 7px orange;
+    border-radius: 50px;
+    text-align: center;
+}
+input {
+    border: ridge 6px rgb(118, 119, 39);
+    border-radius: 50px;
+}
+.sep {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
